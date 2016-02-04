@@ -19,9 +19,7 @@
 		// Get data
 		$name = isset($_POST['name']) ? $_POST['name'] : "";
 		$email = isset($_POST['email']) ? $_POST['email'] : "";
-		// $password = isset($_POST['pwd']) ? mysql_real_escape_string($_POST['pwd']) : "";
-		// $status = isset($_POST['status']) ? mysql_real_escape_string($_POST['status']) : "";
-
+		
 		$stmt = $dbh->prepare("insert into user (name) values (:name)");
 		$stmt->bindParam(':name', $name);
 		$resultat = $stmt->execute(); // Insert data into data base
