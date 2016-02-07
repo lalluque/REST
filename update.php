@@ -44,7 +44,7 @@
 				if ($nbupdate > 0) {
 				    $json = array("status" => 1, "msg" => "user $name updated");	
 				} else{
-				     $json = array("status" => 0, "msg" => "user $id does not exist");
+				     $json = array("status" => 0, "msg" => "user not updated or already updated");
 				}			    
 			} else {
 				$json = array("status" => 0, "msg" => "error updating user");
